@@ -5,7 +5,10 @@ import { lightTheme } from '../../theme';
 const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useThemeContext();
 
-  const handleTheme = (darkModeText: string, lightModeText: string) => {
+  const handleTheme = (
+    darkModeText: 'dark_mode' | 'Dark ',
+    lightModeText: 'light_mode' | 'Light '
+  ) => {
     return theme.bg === lightTheme.bg ? darkModeText : lightModeText;
   };
 
