@@ -25,6 +25,7 @@ export const StyledNavBar = styled.nav`
       align-items: center;
       height: 100%;
       margin: 0 auto 0 0;
+      color: ${(props) => props.theme.text};
     }
 
     @media ${width.desktop} {

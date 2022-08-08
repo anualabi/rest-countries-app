@@ -3,7 +3,8 @@ import { width } from '../../shared/utils/styles';
 
 export const StyledThemeSwitcher = styled.button`
   ${css`
-    background-color: transparent;
+    background-color: inherit;
+    color: ${(props) => props.theme.text};
     border: none;
     cursor: pointer;
     font-size: 1.25rem;
