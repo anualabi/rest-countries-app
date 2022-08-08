@@ -1,10 +1,16 @@
-import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import NormalizeStyles from './NormalizeStyles';
+import { GlobalStyles } from './GlobalStyles';
+import { lightTheme } from './theme';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
-    <div>
-      <h1>Rest countries</h1>
-    </div>
+    <ThemeProvider theme={lightTheme}>
+      <NormalizeStyles />
+      <GlobalStyles />
+      <Layout />
+    </ThemeProvider>
   );
 }
 
