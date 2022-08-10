@@ -1,4 +1,4 @@
-import Container from '../../shared/components/Container/Container';
+import { Container } from '../../shared/components';
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 import { StyledNavBar } from './NavbarStyles';
 
