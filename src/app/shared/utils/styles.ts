@@ -9,7 +9,8 @@ export const color = {
 
 export const width = {
   mobile: `(max-width: 575px)`,
-  desktop: `(min-width: 576px)`
+  tablet: `(min-width: 576px)`,
+  desktop: `(min-width: 992px)`
 };
 
 export const fontWeight = {
