@@ -12,7 +12,7 @@ export const StyledContainer = styled.div`
     box-sizing: border-box;
     display: block;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1366px;
     height: 100%;
     width: 100%;
     padding: 0 1rem;
