@@ -14,7 +14,7 @@ const AppThemeContext = createContext<IThemeContext>({
   toggleTheme: () => null
 });
 
-export const AppThemeProvider = (props: Children) => {
+export const AppThemeProvider = ({ children }: Children) => {
   const [theme, setTheme] = useState(lightTheme);
 
   const toggleTheme = (): void => {
@@ -22,9 +22,7 @@ export const AppThemeProvider = (props: Children) => {
   };
 
   return (
-    <AppThemeContext.Provider value={{ theme, toggleTheme }}>
-      {props.children}
-    </AppThemeContext.Provider>
+    <AppThemeContext.Provider value={{ theme, toggleTheme }}>{children}</AppThemeContext.Provider>
   );
 };
 
