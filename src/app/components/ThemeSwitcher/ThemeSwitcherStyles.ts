@@ -13,13 +13,14 @@ export const StyledThemeSwitcher = styled.button`
     align-items: center;
 
     p {
-      display: none;
-      margin-left: 0.5rem;
+      font-size: 0.8rem;
+      margin-left: 0.25rem;
     }
 
     @media ${width.desktop} {
       p {
-        display: block;
+        font-size: 1rem;
+        margin-left: 0.5rem;
       }
     }
   `}
