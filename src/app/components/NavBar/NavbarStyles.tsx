@@ -20,7 +20,7 @@ export const StyledNavBar = styled.nav`
     }
 
     .logo-text {
-      font-size: 1.25rem;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       height: 100%;
