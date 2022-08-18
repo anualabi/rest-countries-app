@@ -1,4 +1,4 @@
-import { useCountryList } from '../../services/country';
+import { useCountryList } from '../../shared/hooks/useCountry';
 import { Container, Spinner, Error } from '../../shared/components';
 import CountryItem from '../CountryItem/CountryItem';
 import { StyledCountryList } from './CountryListStyles';
@@ -11,7 +11,7 @@ const CountryList = () => {
   if (isError) return <Error message="Unable to display countries" />;
 
   const countryList = data
-    ?.slice(0, 12)
+    ?.slice(0, 24)
     .map((country) => <CountryItem key={country.ccn3} item={country} />);
 
   return (
