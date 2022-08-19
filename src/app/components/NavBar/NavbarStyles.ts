@@ -1,6 +1,16 @@
 import styled, { css } from 'styled-components';
 import { width } from '../../shared/utils/styles';
 
+export const StyledNavWrapper = styled.div`
+  ${css`
+    margin-bottom: 6.5rem;
+
+    @media ${width.desktop} {
+      margin-bottom: 7.5rem;
+    }
+  `}
+`;
+
 export const StyledNavBar = styled.nav`
   ${css`
     box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px,
