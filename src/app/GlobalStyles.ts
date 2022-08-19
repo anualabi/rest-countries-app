@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`${css`
     margin: 0;
     padding: 0;
     background-color: ${(props) => props.theme.bg}};
+    color: ${(props) => props.theme.text}};
   },
   button:focus:not(:focus-visible) {
     outline: none;

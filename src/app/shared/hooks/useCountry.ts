@@ -9,3 +9,15 @@ export function useCountryList() {
     refetchOnWindowFocus: false
   });
 }
+
+export function useCountrySearch(countryName: string) {
+  return useQuery<ICountry[], Error>(
+    ['countrySearch', countryName],
+    () => fetchData(`${apiUrl}/name/${countryName}`),
+    {
+      enabled: Boolean(countryName.length > 1),
+      retry: 1,
+      refetchOnWindowFocus: false
+    }
+  );
+}

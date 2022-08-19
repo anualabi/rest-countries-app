@@ -4,19 +4,19 @@ import { width, fontWeight } from '../../shared/utils/styles';
 export const StyledCountryItem = styled.div`
   ${css`
     box-sizing: border-box;
-    margin: 2rem auto;
-    max-width: 280px;
+    margin: 2rem;
+    max-width: 290px;
     width: 100%;
 
     .card {
-      min-height: 350px;
+      min-height: 380px;
       width: 100%;
       background-color: ${(props) => props.theme.element};
     }
 
     img {
       width: 100%;
-      height: 150px;
+      height: 170px;
       object-fit: cover;
       border-bottom: 1px solid ${(props) => props.theme.bg};
     }

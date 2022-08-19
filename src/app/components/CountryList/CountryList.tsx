@@ -1,24 +1,15 @@
-import { useCountryList } from '../../shared/hooks/useCountry';
-import { Container, Spinner, Error } from '../../shared/components';
 import CountryItem from '../CountryItem/CountryItem';
 import { StyledCountryList } from './CountryListStyles';
+import { ICountry } from '../../shared/types/country';
 
-const CountryList = () => {
-  const { isLoading, isError, data } = useCountryList();
+type ICountryList = { data: ICountry[] | undefined };
 
-  if (isLoading) return <Spinner />;
-
-  if (isError) return <Error message="Unable to display countries" />;
-
+const CountryList = ({ data }: ICountryList) => {
   const countryList = data
     ?.slice(0, 24)
     .map((country) => <CountryItem key={country.ccn3} item={country} />);
 
-  return (
-    <Container>
-      <StyledCountryList>{countryList}</StyledCountryList>
-    </Container>
-  );
+  return <StyledCountryList>{countryList}</StyledCountryList>;
 };
 
 export default CountryList;

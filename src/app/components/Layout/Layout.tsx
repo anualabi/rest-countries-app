@@ -1,11 +1,11 @@
 import NavBar from '../NavBar/Navbar';
-import CountryList from '../CountryList/CountryList';
+import HomePage from '../../pages/HomePage';
 
 const Layout = () => {
   return (
     <>
       <NavBar />
-      <CountryList />
+      <HomePage />
     </>
   );
 };
