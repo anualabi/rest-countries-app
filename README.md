@@ -15,7 +15,6 @@
 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Styled components](https://styled-components.com/)
 - [Axios](https://axios-http.com/docs/intro)
 - [React Query](https://react-query-v3.tanstack.com/)
 
@@ -25,6 +24,7 @@ The features implemented are as follows:
 
 - Toggle the color scheme between light and dark mode
 - See all countries from the API on the homepage
+- Search for a country using an `input` field
 
 ### How To Use
 
