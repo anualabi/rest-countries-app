@@ -17,11 +17,13 @@
   width: 100%;
   height: 170px;
   object-fit: cover;
+  transition: all 0.5s;
 }
 
 .content {
   padding: 0 1rem;
   color: var(--text);
+  transition: all 0.5s;
 }
 
 .content > .countryName {

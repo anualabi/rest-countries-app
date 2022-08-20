@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import App from './app/App';
 import './index.css';
 import { ThemeProvider } from './app/context/themeContext';
+import App from './app/App';
 import reportWebVitals from './reportWebVitals';
 
 const queryClient = new QueryClient();
