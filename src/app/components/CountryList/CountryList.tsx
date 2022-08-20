@@ -1,6 +1,6 @@
 import CountryItem from '../CountryItem/CountryItem';
-import { StyledCountryList } from './CountryListStyles';
 import { ICountry } from '../../shared/types/country';
+import styles from './CountryList.module.css';
 
 type ICountryList = { data: ICountry[] | undefined };
 
@@ -9,7 +9,7 @@ const CountryList = ({ data }: ICountryList) => {
     ?.slice(0, 24)
     .map((country) => <CountryItem key={country.ccn3} item={country} />);
 
-  return <StyledCountryList>{countryList}</StyledCountryList>;
+  return <div className={styles.countryList}>{countryList}</div>;
 };
 
 export default CountryList;

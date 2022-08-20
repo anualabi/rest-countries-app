@@ -1,22 +1,10 @@
 import { ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import styles from './Container.module.css';
 
 type IContainer = { children: ReactNode };
 
 const Container = ({ children }: IContainer) => {
-  return <StyledContainer className="container">{children}</StyledContainer>;
+  return <div className={styles.container}>{children}</div>;
 };
-
-export const StyledContainer = styled.div`
-  ${css`
-    box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
-    max-width: 1366px;
-    height: 100%;
-    width: 100%;
-    padding: 0 1rem;
-  `}
-`;
 
 export default Container;

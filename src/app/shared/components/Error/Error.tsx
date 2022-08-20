@@ -1,17 +1,9 @@
-import styled, { css } from 'styled-components';
+import styles from './Error.module.css';
 
 type IError = { message: string };
 
 const Error = ({ message }: IError) => {
-  return <StyledError className="error">{message}</StyledError>;
+  return <p className={styles.error}>{message}</p>;
 };
-
-const StyledError = styled.p`
-  ${css`
-    color: red;
-    font-size: 1.2rem;
-    text-align: center;
-  `}
-`;
 
 export default Error;

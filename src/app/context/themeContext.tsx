@@ -1,24 +1,33 @@
-import { createContext, useState, useContext, ReactNode } from 'react';
-import { lightTheme, darkTheme } from '../theme';
-import { ITheme } from '../shared/types/theme';
+import { createContext, ReactNode, useContext } from 'react';
+import { useLocalStorage } from '../shared/hooks/useLocalStorage';
 
 type Children = { children: ReactNode };
 
 interface IThemeContext {
-  theme: ITheme;
+  theme: string;
   toggleTheme: () => void;
 }
 
+const getLocalStorage = () => {
+  const theme = localStorage.getItem('theme');
+  if (theme) {
+    return JSON.parse(theme) || '{}';
+  } else {
+    return [];
+  }
+};
+
 const AppThemeContext = createContext<IThemeContext>({
-  theme: lightTheme,
+  theme: getLocalStorage(),
   toggleTheme: () => null
 });
 
 export const AppThemeProvider = ({ children }: Children) => {
-  const [theme, setTheme] = useState(lightTheme);
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage<string>('theme', defaultDark ? 'dark' : 'light');
 
-  const toggleTheme = (): void => {
-    setTheme((prev) => (prev === lightTheme ? darkTheme : lightTheme));
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
   return (

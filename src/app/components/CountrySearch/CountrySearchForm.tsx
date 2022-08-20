@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Card, Field } from '../../shared/components';
+import styles from './CountrySearch.module.css';
 
 interface ISearch {
   searchQuery: string;
@@ -8,10 +8,11 @@ interface ISearch {
 
 const CountrySearchForm = ({ searchQuery, handleSearchQuery }: ISearch) => {
   return (
-    <StyledSearchForm>
-      <Card>
+    <div className={styles.form}>
+      <Card className={styles.card}>
         <Field>
           <Field.Input
+            className={styles.input}
             type="text"
             name="search"
             aria-label="search"
@@ -22,27 +23,8 @@ const CountrySearchForm = ({ searchQuery, handleSearchQuery }: ISearch) => {
           />
         </Field>
       </Card>
-    </StyledSearchForm>
+    </div>
   );
 };
-
-export const StyledSearchForm = styled.form`
-  display: flex;
-  max-width: 500px;
-
-  .card {
-    width: 100%;
-  }
-
-  .start-icon {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-right: 1rem;
-  }
-
-  input {
-    font-size: 1rem;
-  }
-`;
 
 export default CountrySearchForm;

@@ -1,22 +1,10 @@
 import { ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import styles from './Card.module.css';
 
-type Children = { children: ReactNode };
+type Children = { className?: string; children: ReactNode };
 
-const Card = ({ children }: Children) => {
-  return <StyledCard className="card">{children}</StyledCard>;
+const Card = ({ className, children }: Children) => {
+  return <div className={`${styles.card} ${className}`}>{children}</div>;
 };
-
-const StyledCard = styled.div`
-  ${css`
-    background-color: ${(props) => props.theme.element};
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-
-    &:hover {
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
-  `}
-`;
 
 export default Card;

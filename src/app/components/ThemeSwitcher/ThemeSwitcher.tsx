@@ -1,6 +1,5 @@
-import { StyledThemeSwitcher } from './ThemeSwitcherStyles';
 import { useThemeContext } from '../../context/themeContext';
-import { lightTheme } from '../../theme';
+import styles from './ThemeSwitcher.module.css';
 
 const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useThemeContext();
@@ -9,14 +8,14 @@ const ThemeSwitcher = () => {
     darkModeText: 'dark_mode' | 'Dark ',
     lightModeText: 'light_mode' | 'Light '
   ) => {
-    return theme.bg === lightTheme.bg ? darkModeText : lightModeText;
+    return theme === 'light' ? darkModeText : lightModeText;
   };
 
   return (
-    <StyledThemeSwitcher onClick={toggleTheme}>
+    <button type="button" onClick={toggleTheme} className={styles.button}>
       <span className="material-symbols-outlined">{handleTheme('dark_mode', 'light_mode')}</span>
-      <p>{handleTheme('Dark ', 'Light ')}Mode</p>
-    </StyledThemeSwitcher>
+      <p className={styles.toggleText}>{handleTheme('Dark ', 'Light ')}Mode</p>
+    </button>
   );
 };
 

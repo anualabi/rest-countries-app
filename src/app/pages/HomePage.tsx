@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import styled from 'styled-components';
 import { Container } from '../shared/components';
 import CountrySearchForm from '../components/CountrySearch/CountrySearchForm';
 import CountryAll from '../components/CountryAll/CountryAll';
@@ -17,14 +16,12 @@ const HomePage = () => {
 
   return (
     <Container>
-      <StyledHomePage>
+      <div>
         <CountrySearchForm searchQuery={searchTerm} handleSearchQuery={(e) => setSearchTerm(e)} />
         {displayCountryList}
-      </StyledHomePage>
+      </div>
     </Container>
   );
 };
-
-export const StyledHomePage = styled.main``;
 
 export default HomePage;

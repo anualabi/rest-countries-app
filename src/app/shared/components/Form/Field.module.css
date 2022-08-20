@@ -1,0 +1,43 @@
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.inputGroup {
+  box-sizing: border-box;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
+  height: 30px;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.inputGroup:hover,
+.inputGroup:focus-within {
+  border-color: var(--element);
+}
+
+.startIcon {
+  margin-right: 0.25rem;
+}
+
+.endIcon {
+  margin-left: 0.25rem;
+}
+
+.input {
+  border: none;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-style: normal;
+  line-height: 1.5;
+  margin-right: auto;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
