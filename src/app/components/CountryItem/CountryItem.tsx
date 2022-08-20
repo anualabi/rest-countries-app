@@ -1,6 +1,5 @@
 import Card from '../../shared/components/Card/Card';
 import { Country } from '../../shared/types/country';
-// import { StyledCountryItem } from './CountryItemStyles';
 import styles from './CountryItem.module.css';
 
 type ICountryItem = { item: Country };
@@ -13,10 +12,10 @@ const CountryItem = ({ item }: ICountryItem) => {
       <Card>
         <img className={styles.flag} src={flags.svg} alt={`${name.common} flag`} />
         <div className={styles.content}>
-          <h2>{name.common}</h2>
+          <h2 className={styles.countryName}>{name.common}</h2>
           <p className={styles.info}>
             Population:
-            <span>{population}</span>
+            <span>{population && population.toLocaleString()}</span>
           </p>
           <p className={styles.info}>
             Region:

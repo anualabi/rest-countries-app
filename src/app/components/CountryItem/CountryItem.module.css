@@ -24,9 +24,15 @@
   color: var(--text);
 }
 
+.content > .countryName {
+  font-size: 1.3rem;
+  letter-spacing: 0.02rem;
+}
+
 .content > .info {
+  font-size: 1rem;
   font-weight: 800;
-  margin-left: 0;
+  margin: 0.75rem 0;
 }
 
 .content > .info > span {
