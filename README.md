@@ -9,7 +9,7 @@
 
 ### Overview
 
-![screenshot](https://user-images.githubusercontent.com/33486765/184047736-a2765c1d-7a80-4612-b747-037f79e01319.png)
+![screenshot](https://user-images.githubusercontent.com/33486765/185797467-205d51f2-0e10-457a-a99f-8f33f97d585d.png)
 
 ### Built With
 
@@ -25,6 +25,7 @@ The features implemented are as follows:
 - Toggle the color scheme between light and dark mode
 - See all countries from the API on the homepage
 - Search for a country using an `input` field
+- Filter countries by region
 
 ### How To Use
 
