@@ -1,14 +1,12 @@
 type ITranslation = { official: string; common: string };
 
-interface ITranslations {
-  [key: string]: ITranslation;
-}
-interface ICurrency {
-  [key: string]: {
-    name: string;
-    symbol: string;
-  };
-}
+type ITranslations = { [key: string]: ITranslation };
+
+type ICurrency = { [key: string]: { name: string; symbol: string } };
+
+type INativeName = { [key: string]: { official: string; common: string } };
+
+type IDemonyms = { [key: string]: { f: string; m: string } };
 
 export interface ICountry {
   altSpellings: string[];
@@ -24,25 +22,20 @@ export interface ICountry {
   coatOfArms: { png: string; svg: string };
   continents: string[];
   currencies: ICurrency;
-  demonyms: {
-    eng: { f: string; m: string };
-    fra: { f: string; m: string };
-  };
+  demonyms: IDemonyms;
   fifa: string;
   flag: string;
   flags: { png: string; svg: string };
   idd: { root: string; suffixes: string[] };
   independent: boolean;
   landlocked: boolean;
-  languages: { ara: string };
+  languages: { [key: string]: string };
   latlng: number[];
   maps: { googleMaps: string; openStreetMaps: string };
   name: {
     common: string;
     official: string;
-    nativeName: {
-      ara: { common: string; official: string };
-    };
+    nativeName: INativeName;
   };
   population: number;
   postalCode: { format: string; regex: string };
