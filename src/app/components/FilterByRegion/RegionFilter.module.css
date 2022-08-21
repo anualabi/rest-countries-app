@@ -6,12 +6,14 @@
 
 .card {
   background-color: var(--element);
+  border-radius: 5px;
   width: 100%;
   transition: all 0.5s;
 }
 
 .select {
   background-color: var(--element);
+  border-radius: 5px;
   color: var(--text);
   cursor: pointer;
   display: flex;
@@ -24,7 +26,12 @@
 .options {
   position: absolute;
   left: -40px;
+  margin-top: 0.35rem;
   width: 100%;
+}
+
+.options > .card {
+  border-radius: 5px;
 }
 
 .options > .card > li {

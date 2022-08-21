@@ -4,12 +4,14 @@
 }
 
 .card {
+  border-radius: 5px;
   width: 100%;
 }
 
 .card > div {
   background-color: var(--element);
   border: 2px solid var(--element);
+  border-radius: 5px;
   transition: all 0.5s;
 }
 

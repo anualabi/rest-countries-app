@@ -9,7 +9,7 @@ const CountryItem = ({ item }: ICountryItem) => {
 
   return (
     <div className={styles.country}>
-      <Card>
+      <Card className={styles.card}>
         <img className={styles.flag} src={flags.svg} alt={`${name.common} flag`} />
         <div className={styles.content}>
           <h2 className={styles.countryName}>{name.common}</h2>
