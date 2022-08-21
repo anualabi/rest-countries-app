@@ -12,6 +12,7 @@
 
 .button > .toggleText {
   font-size: 0.8rem;
+  font-weight: 300;
   margin-left: 0.25rem;
 }
 
