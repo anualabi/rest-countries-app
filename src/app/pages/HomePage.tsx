@@ -22,19 +22,17 @@ const HomePage = () => {
 
   return (
     <Container>
-      <div>
-        <div className={styles.filter}>
-          <CountrySearchForm
-            searchQuery={searchTerm}
-            handleSearchQuery={(e) => setFilter({ searchTerm: e, selectedOption: '' })}
-          />
-          <RegionFilterForm
-            selectedOption={selectedOption}
-            handleSelectOption={(e) => setFilter({ searchTerm: '', selectedOption: e })}
-          />
-        </div>
-        {displayCountryList}
+      <div className={styles.filter}>
+        <CountrySearchForm
+          searchQuery={searchTerm}
+          handleSearchQuery={(e) => setFilter({ searchTerm: e, selectedOption: '' })}
+        />
+        <RegionFilterForm
+          selectedOption={selectedOption}
+          handleSelectOption={(e) => setFilter({ searchTerm: '', selectedOption: e })}
+        />
       </div>
+      {displayCountryList}
     </Container>
   );
 };
