@@ -8,7 +8,7 @@ interface ISearch {
 
 const CountrySearchForm = ({ searchQuery, handleSearchQuery }: ISearch) => {
   return (
-    <div className={styles.form}>
+    <form className={styles.form}>
       <Card className={styles.card}>
         <Field>
           <Field.Input
@@ -23,7 +23,7 @@ const CountrySearchForm = ({ searchQuery, handleSearchQuery }: ISearch) => {
           />
         </Field>
       </Card>
-    </div>
+    </form>
   );
 };
 
