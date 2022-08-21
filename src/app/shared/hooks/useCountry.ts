@@ -21,3 +21,13 @@ export function useCountrySearch(countryName: string) {
     }
   );
 }
+
+export function useRegion(region: string) {
+  return useQuery<ICountry[], Error>(
+    ['continent', region],
+    () => fetchData(`${apiUrl}/region/${region}`),
+    {
+      refetchOnWindowFocus: false
+    }
+  );
+}

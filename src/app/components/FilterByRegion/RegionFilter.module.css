@@ -1,0 +1,48 @@
+.regionFilter {
+  margin-top: 1rem;
+  width: 100%;
+  position: relative;
+}
+
+.card {
+  background-color: var(--element);
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.select {
+  background-color: var(--element);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.05rem 1rem;
+  transition: all 0.5s;
+}
+
+.options {
+  position: absolute;
+  left: -40px;
+  width: 100%;
+}
+
+.options > .card > li {
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  padding: 0.75rem 1rem;
+  transition: all 0.5s;
+}
+
+.options > .card > li:hover {
+  background-color: var(--input);
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 992px) {
+  .regionFilter {
+    margin-top: 0;
+    max-width: 250px;
+  }
+}
