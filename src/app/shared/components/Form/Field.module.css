@@ -6,19 +6,11 @@
 
 .inputGroup {
   box-sizing: border-box;
-  color: var(--text);
   display: flex;
   align-items: center;
   padding: 1.6rem;
   height: 30px;
   width: 100%;
-  transition: all 0.5s;
-}
-
-.inputGroup:hover,
-.inputGroup:focus-within {
-  border-color: var(--element);
-  transition: all 0.5s;
 }
 
 .startIcon {
