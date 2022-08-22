@@ -17,15 +17,17 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [Axios](https://axios-http.com/docs/intro)
 - [React Query](https://react-query-v3.tanstack.com/)
+- [React Router](https://reactrouter.com/)
 
 ### Features
 
 The features implemented are as follows:
 
-- Toggle the color scheme between light and dark mode
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
+- User can toggle the color scheme between light and dark mode
+- User can see all countries from the API on the homepage
+- User can search for a country using an `input` field
+- User can filter countries by region
+- User can click on a country to see more information on a separate page
 
 ### How To Use
 
