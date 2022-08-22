@@ -34,17 +34,6 @@
   letter-spacing: 0.02rem;
 }
 
-.content > .info {
-  font-size: 1rem;
-  font-weight: 800;
-  margin: 0.75rem 0;
-}
-
-.content > .info > span {
-  font-weight: 300;
-  margin-left: 0.5rem;
-}
-
 @media screen and (min-width: 992px) {
   .country {
     margin: 2rem 0;
