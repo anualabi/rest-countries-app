@@ -1,0 +1,7 @@
+.button {
+  border: none;
+}
+
+.button:focus:not(:focus-visible) {
+  outline: none;
+}

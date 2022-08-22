@@ -1,4 +1,5 @@
 import { useThemeContext } from '../../context/themeContext';
+import { Button } from '../../shared/components';
 import styles from './ThemeSwitcher.module.css';
 
 const ThemeSwitcher = () => {
@@ -12,10 +13,10 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <button type="button" onClick={toggleTheme} className={styles.button}>
+    <Button onClick={toggleTheme} className={styles.button}>
       <span className="material-symbols-outlined">{handleTheme('dark_mode', 'light_mode')}</span>
       <p className={styles.toggleText}>{handleTheme('Dark ', 'Light ')}Mode</p>
-    </button>
+    </Button>
   );
 };
 
