@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 import styles from './Container.module.css';
 
-type IContainer = { children: ReactNode };
+type IContainer = { className?: string; children: ReactNode };
 
-const Container = ({ children }: IContainer) => {
-  return <div className={styles.container}>{children}</div>;
+const Container = ({ children, className }: IContainer) => {
+  return <div className={`${styles.container} ${className}`}>{children}</div>;
 };
 
 export default Container;
