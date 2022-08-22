@@ -12,18 +12,21 @@
   transition: all 0.5s;
 }
 
-.navbar > div {
+.navbar > .container {
   display: flex;
   align-items: center;
 }
 
-.logo {
-  color: var(--text);
-  font-size: 1rem;
+.logoLink {
   display: flex;
   align-items: center;
-  height: 100%;
   margin: 0 auto 0 0;
+}
+
+.logoLink > .logoText {
+  color: var(--text);
+  font-size: 1rem;
+  height: 100%;
   transition: all 0.5s;
 }
 
@@ -32,7 +35,7 @@
     height: 80px;
   }
 
-  .logo {
+  .logoLink > .logoText {
     font-size: 1.5rem;
   }
 }

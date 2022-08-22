@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom';
 import { useThemeContext } from './context/themeContext';
 import Layout from './components/Layout/Layout';
 
@@ -6,7 +7,9 @@ function App() {
 
   return (
     <div data-theme={theme}>
-      <Layout />
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
     </div>
   );
 }
