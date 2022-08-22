@@ -37,7 +37,6 @@
 .options > .card > li {
   color: var(--text);
   cursor: pointer;
-  list-style: none;
   padding: 0.75rem 1rem;
   transition: all 0.5s;
 }
