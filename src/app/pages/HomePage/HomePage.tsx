@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Container } from '../shared/components';
-import CountrySearchForm from '../components/CountrySearch/CountrySearchForm';
-import RegionFilterForm from '../components/FilterByRegion/RegionFilterForm';
-import CountryAll from '../components/CountryAll/CountryAll';
-import CountrySearchResult from '../components/CountrySearch/CountrySearchResult';
-import RegionCountryList from '../components/FilterByRegion/RegionCountryList';
+import { Container } from '../../shared/components';
+import CountrySearchForm from '../../components/CountrySearch/CountrySearchForm';
+import RegionFilterForm from '../../components/FilterByRegion/RegionFilterForm';
+import CountryAll from '../../components/CountryAll/CountryAll';
+import CountrySearchResult from '../../components/CountrySearch/CountrySearchResult';
+import RegionCountryList from '../../components/FilterByRegion/RegionCountryList';
 import styles from './HomePage.module.css';
 
 const HomePage = () => {
