@@ -10,6 +10,28 @@ export function useCountryList() {
   });
 }
 
+export function useCountryItem(code: string | undefined) {
+  return useQuery<ICountry[], Error>(
+    ['countryItem', code],
+    () => fetchData(`${apiUrl}/alpha/${code}`),
+    {
+      enabled: Boolean(code !== undefined),
+      refetchOnWindowFocus: false
+    }
+  );
+}
+
+export function useCountryCode(codes: string | undefined) {
+  return useQuery<ICountry[], Error>(
+    ['countryCode', codes],
+    () => fetchData(`${apiUrl}/alpha?codes=${codes}`),
+    {
+      enabled: !!codes,
+      refetchOnWindowFocus: false
+    }
+  );
+}
+
 export function useCountrySearch(countryName: string) {
   return useQuery<ICountry[], Error>(
     ['countrySearch', countryName],

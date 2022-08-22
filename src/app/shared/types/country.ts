@@ -4,14 +4,14 @@ type ITranslations = { [key: string]: ITranslation };
 
 type ICurrency = { [key: string]: { name: string; symbol: string } };
 
-type INativeName = { [key: string]: { official: string; common: string } };
+export type INativeName = { [key: string]: { official: string; common: string } };
 
 type IDemonyms = { [key: string]: { f: string; m: string } };
 
 export interface ICountry {
   altSpellings: string[];
   area: number;
-  borders: string[];
+  borders?: string[];
   capital: string[];
   capitalInfo: { latlng: number[] };
   car: { signs: string[]; side: string };
@@ -49,4 +49,7 @@ export interface ICountry {
   unMember: boolean;
 }
 
-export type Country = Pick<ICountry, 'flags' | 'name' | 'population' | 'region' | 'capital'>;
+export type Country = Pick<
+  ICountry,
+  'ccn3' | 'flags' | 'name' | 'population' | 'region' | 'capital'
+>;
