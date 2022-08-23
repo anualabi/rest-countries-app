@@ -28,6 +28,7 @@ The features implemented are as follows:
 - User can search for a country using an `input` field
 - User can filter countries by region
 - User can click on a country to see more information on a separate page
+- User can click through to the border countries on the country detail page
 
 ### How To Use
 
