@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Container, Spinner, Error, Button } from '../../shared/components';
 import { useCountryItem, useCountryCode } from '../../shared/hooks/useCountry';
 import Detail from '../../components/CountryDetail/CountryDetail';
@@ -15,7 +15,7 @@ const CountryPage = () => {
 
   if (isError) return <Error message={'Unable to display country details'} />;
 
-  if (!data) return <p>No details not found.</p>;
+  if (!data) return <p>No details found.</p>;
 
   const { flags, name, population, region, subregion, capital, tld, currencies, languages } =
     data[0];
@@ -35,7 +35,7 @@ const CountryPage = () => {
     <ul className={styles.borderList}>
       {countryCodeQuery.data.map((d) => (
         <li key={d.ccn3} className={styles.borderListItem}>
-          {d.name.common}
+          <Link to={`/${d.ccn3}`}>{d.name.common}</Link>
         </li>
       ))}
     </ul>
