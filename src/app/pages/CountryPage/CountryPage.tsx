@@ -43,8 +43,8 @@ const CountryPage = () => {
 
   return (
     <Container>
-      <Button className={styles.backButton} onClick={() => navigate(-1)}>
-        <span className="material-symbols-outlined">arrow_back</span>Back
+      <Button className={styles.backButton} startIcon="arrow_back" onClick={() => navigate(-1)}>
+        Back
       </Button>
       <div className={styles.countryDetail}>
         <div className={styles.flagWrapper}>

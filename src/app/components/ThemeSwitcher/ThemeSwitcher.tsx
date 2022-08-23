@@ -13,8 +13,11 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <Button onClick={toggleTheme} className={styles.button}>
-      <span className="material-symbols-outlined">{handleTheme('dark_mode', 'light_mode')}</span>
+    <Button
+      className={styles.button}
+      startIcon={handleTheme('dark_mode', 'light_mode')}
+      onClick={toggleTheme}
+    >
       <p className={styles.toggleText}>{handleTheme('Dark ', 'Light ')}Mode</p>
     </Button>
   );
