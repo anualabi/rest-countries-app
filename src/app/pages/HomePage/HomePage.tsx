@@ -21,8 +21,8 @@ const HomePage = () => {
   }
 
   return (
-    <Container>
-      <div className={styles.filter}>
+    <>
+      <Container className={styles.filter}>
         <CountrySearchForm
           searchQuery={searchTerm}
           handleSearchQuery={(e) => setFilter({ searchTerm: e, selectedOption: '' })}
@@ -31,9 +31,9 @@ const HomePage = () => {
           selectedOption={selectedOption}
           handleSelectOption={(e) => setFilter({ searchTerm: '', selectedOption: e })}
         />
-      </div>
+      </Container>
       {displayCountryList}
-    </Container>
+    </>
   );
 };
 

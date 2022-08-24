@@ -1,10 +1,16 @@
-.spinner {
+.container {
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > .spinner {
   border: 10px solid var(--background);
   border-top: 10px solid var(--text);
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  margin: 20% auto;
   animation: spin 1s linear infinite;
   transition: all 0.5s;
 }

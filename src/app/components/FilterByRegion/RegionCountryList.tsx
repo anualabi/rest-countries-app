@@ -1,4 +1,4 @@
-import { Spinner, Error } from '../../shared/components';
+import { Spinner, Error, Container } from '../../shared/components';
 import { useRegion } from '../../shared/hooks/useCountry';
 import CountryList from '../CountryList/CountryList';
 
@@ -11,7 +11,11 @@ const RegionCountryList = ({ region }: IRegionCountryList) => {
 
   if (isError) return <Error message={`Unable to display countries in ${region}.`} />;
 
-  return <CountryList data={data} />;
+  return (
+    <Container>
+      <CountryList data={data} />
+    </Container>
+  );
 };
 
 export default RegionCountryList;

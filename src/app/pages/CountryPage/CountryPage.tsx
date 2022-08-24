@@ -26,7 +26,7 @@ const CountryPage = () => {
   };
 
   const borders = countryCodeQuery.isLoading ? (
-    <Spinner />
+    <Spinner size="20" borderWidth="2" />
   ) : countryCodeQuery.isError ? (
     <Error message="Unable to display border countries." />
   ) : !countryCodeQuery.data ? (
