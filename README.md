@@ -1,5 +1,27 @@
 <h1 align="center">Countries App</h1>
 
+<div align="center">
+   Solution for a challenge from  <a href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a>.
+</div>
+
+<div align="center">
+  <h3>
+    <a href="https://restful-countries-app.netlify.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/anualabi/rest-countries-app">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca">
+      Challenge
+    </a>
+  </h3>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -42,6 +64,9 @@ $ git clone https://github.com/anualabi/rest-countries-app
 
 # Install dependencies
 $ npm install
+
+# Add environment variable
+REACT_APP_API="https://restcountries.com/v3.1"
 
 # Run the app
 $ npm start
