@@ -49,6 +49,7 @@ export function useRegion(region: string) {
     ['continent', region],
     () => fetchData(`${apiUrl}/region/${region}`),
     {
+      enabled: !!region,
       refetchOnWindowFocus: false
     }
   );

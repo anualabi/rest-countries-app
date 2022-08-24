@@ -1,38 +1,27 @@
 import { useState } from 'react';
 import { Container } from '../../shared/components';
-import CountrySearchForm from '../../components/CountrySearch/CountrySearchForm';
-import RegionFilterForm from '../../components/FilterByRegion/RegionFilterForm';
-import CountryAll from '../../components/CountryAll/CountryAll';
-import CountrySearchResult from '../../components/CountrySearch/CountrySearchResult';
-import RegionCountryList from '../../components/FilterByRegion/RegionCountryList';
+import CountrySearch from '../../components/CountrySearch/CountrySearch';
+import RegionFilter from '../../components/FilterByRegion/RegionFilter';
+import CountryList from '../../components/CountryList/CountryList';
 import styles from './HomePage.module.css';
 
 const HomePage = () => {
   const [filter, setFilter] = useState({ searchTerm: '', selectedOption: '' });
   const { searchTerm, selectedOption } = filter;
-  let displayCountryList: React.ReactNode;
-
-  if (searchTerm.length > 1) {
-    displayCountryList = <CountrySearchResult searchTerm={searchTerm} />;
-  } else if (selectedOption) {
-    displayCountryList = <RegionCountryList region={selectedOption} />;
-  } else {
-    displayCountryList = <CountryAll />;
-  }
 
   return (
     <>
       <Container className={styles.filter}>
-        <CountrySearchForm
+        <CountrySearch
           searchQuery={searchTerm}
           handleSearchQuery={(e) => setFilter({ searchTerm: e, selectedOption: '' })}
         />
-        <RegionFilterForm
+        <RegionFilter
           selectedOption={selectedOption}
           handleSelectOption={(e) => setFilter({ searchTerm: '', selectedOption: e })}
         />
       </Container>
-      {displayCountryList}
+      <CountryList searchTerm={searchTerm} selectedOption={selectedOption} />
     </>
   );
 };
