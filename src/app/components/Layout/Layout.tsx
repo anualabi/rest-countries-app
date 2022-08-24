@@ -1,19 +1,10 @@
-import { Routes, Route } from 'react-router-dom';
-import NavBar from '../NavBar/Navbar';
-import HomePage from '../../pages/HomePage/HomePage';
-import CountryPage from '../../pages/CountryPage/CountryPage';
+import React from 'react';
 import styles from './Layout.module.css';
 
-const Layout = () => {
-  return (
-    <div className={styles.layout}>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/:id" element={<CountryPage />} />
-      </Routes>
-    </div>
-  );
+type ILayout = { children: React.ReactNode };
+
+const Layout = ({ children }: ILayout) => {
+  return <div className={styles.layout}>{children}</div>;
 };
 
 export default Layout;
