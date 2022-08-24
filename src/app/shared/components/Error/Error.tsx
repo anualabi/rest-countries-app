@@ -1,9 +1,14 @@
+import Container from '../Container/Container';
 import styles from './Error.module.css';
 
-type IError = { message: string };
+type IError = { className?: string; message: string };
 
-const Error = ({ message }: IError) => {
-  return <p className={styles.error}>{message}</p>;
+const Error = ({ className, message }: IError) => {
+  return (
+    <Container>
+      <p className={`${styles.error} ${className}`}>{message}</p>
+    </Container>
+  );
 };
 
 export default Error;

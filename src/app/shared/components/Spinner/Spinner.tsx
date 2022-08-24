@@ -1,13 +1,13 @@
 import Container from '../Container/Container';
 import styles from './Spinner.module.css';
 
-type ISpinner = { size?: string; borderWidth?: string };
+type ISpinner = { className?: string; size?: string; borderWidth?: string };
 
-const Spinner = ({ size, borderWidth }: ISpinner) => {
+const Spinner = ({ className, size, borderWidth }: ISpinner) => {
   return (
     <Container className={styles.container}>
       <div
-        className={styles.spinner}
+        className={`${styles.spinner} ${className}`}
         style={{ width: `${size}px`, height: `${size}px`, borderWidth: `${borderWidth}px` }}
       ></div>
     </Container>
