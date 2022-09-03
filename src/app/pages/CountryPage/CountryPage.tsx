@@ -21,7 +21,7 @@ const CountryPage = () => {
     data[0];
 
   const getNativeName = (obj: INativeName): string => {
-    const lastKey = Object.keys({ ...obj }).pop() as string;
+    const lastKey = Object.keys(obj).pop() as string;
     return obj[lastKey].common;
   };
 
