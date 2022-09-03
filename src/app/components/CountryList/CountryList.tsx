@@ -3,9 +3,9 @@ import { useCountryList, useCountrySearch, useRegion } from '../../shared/hooks/
 import { Spinner, Error, Container } from '../../shared/components';
 import styles from './CountryList.module.css';
 
-type ICountryList = { searchTerm: string; selectedOption: string };
+type CountryListProps = { searchTerm: string; selectedOption: string };
 
-const CountryList = ({ searchTerm, selectedOption }: ICountryList) => {
+const CountryList = ({ searchTerm, selectedOption }: CountryListProps) => {
   const countryListQuery = useCountryList();
   const countrySearchQuery = useCountrySearch(searchTerm);
   const regionQuery = useRegion(selectedOption);

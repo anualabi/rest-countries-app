@@ -1,9 +1,9 @@
 import { Button } from '../../shared/components';
 import styles from './ThemeSwitcher.module.css';
 
-type IThemeSwitcher = { theme: string; toggleTheme: () => void };
+type ThemeSwitcherProps = { theme: string; toggleTheme: () => void };
 
-const ThemeSwitcher = ({ theme, toggleTheme }: IThemeSwitcher) => {
+const ThemeSwitcher = ({ theme, toggleTheme }: ThemeSwitcherProps) => {
   return (
     <Button
       className={styles.button}

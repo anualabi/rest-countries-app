@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Container } from '../../shared/components';
 import styles from './Navbar.module.css';
 
-type INavBar = { children: React.ReactNode };
+type NavBarProps = { children: React.ReactNode };
 
-const NavBar = ({ children }: INavBar) => {
+const NavBar = ({ children }: NavBarProps) => {
   return (
     <nav className={styles.navbar}>
       <Container className={styles.container}>

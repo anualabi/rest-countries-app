@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import Card from '../../shared/components/Card/Card';
-import { Country } from '../../shared/types/country';
+import { CountryProps } from '../../shared/types/country';
 import Detail from '../CountryDetail/CountryDetail';
 import styles from './CountryItem.module.css';
 
-type ICountryItem = { item: Country };
+type CountryItemProps = { item: CountryProps };
 
-const CountryItem = ({ item }: ICountryItem) => {
+const CountryItem = ({ item }: CountryItemProps) => {
   const { ccn3, flags, name, population, region, capital } = item;
 
   return (

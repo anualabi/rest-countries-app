@@ -8,7 +8,7 @@ export type INativeName = { [key: string]: { official: string; common: string } 
 
 type IDemonyms = { [key: string]: { f: string; m: string } };
 
-export interface ICountry {
+export interface APIResponseProps {
   altSpellings: string[];
   area: number;
   borders?: string[];
@@ -49,7 +49,7 @@ export interface ICountry {
   unMember: boolean;
 }
 
-export type Country = Pick<
-  ICountry,
+export type CountryProps = Pick<
+  APIResponseProps,
   'ccn3' | 'flags' | 'name' | 'population' | 'region' | 'capital'
 >;

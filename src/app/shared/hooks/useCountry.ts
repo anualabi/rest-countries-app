@@ -1,17 +1,17 @@
 import { useQuery } from 'react-query';
-import { ICountry } from '../types/country';
+import { APIResponseProps } from '../types/country';
 import { fetchData } from '../../services/country';
 
 const apiUrl = process.env.REACT_APP_API;
 
 export function useCountryList() {
-  return useQuery<ICountry[], Error>(['countryList'], () => fetchData(`${apiUrl}/all`), {
+  return useQuery<APIResponseProps[], Error>(['countryList'], () => fetchData(`${apiUrl}/all`), {
     refetchOnWindowFocus: false
   });
 }
 
 export function useCountryItem(code: string | undefined) {
-  return useQuery<ICountry[], Error>(
+  return useQuery<APIResponseProps[], Error>(
     ['countryItem', code],
     () => fetchData(`${apiUrl}/alpha/${code}`),
     {
@@ -22,7 +22,7 @@ export function useCountryItem(code: string | undefined) {
 }
 
 export function useCountryCode(codes: string | undefined) {
-  return useQuery<ICountry[], Error>(
+  return useQuery<APIResponseProps[], Error>(
     ['countryCode', codes],
     () => fetchData(`${apiUrl}/alpha?codes=${codes}`),
     {
@@ -33,7 +33,7 @@ export function useCountryCode(codes: string | undefined) {
 }
 
 export function useCountrySearch(countryName: string) {
-  return useQuery<ICountry[], Error>(
+  return useQuery<APIResponseProps[], Error>(
     ['countrySearch', countryName],
     () => fetchData(`${apiUrl}/name/${countryName}`),
     {
@@ -45,7 +45,7 @@ export function useCountrySearch(countryName: string) {
 }
 
 export function useRegion(region: string) {
-  return useQuery<ICountry[], Error>(
+  return useQuery<APIResponseProps[], Error>(
     ['continent', region],
     () => fetchData(`${apiUrl}/region/${region}`),
     {

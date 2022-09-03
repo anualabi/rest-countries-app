@@ -1,4 +1,4 @@
-export interface IRegion {
+export interface RegionProps {
   key: string;
   value: string;
 }

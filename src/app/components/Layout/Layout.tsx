@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Layout.module.css';
 
-type ILayout = { children: React.ReactNode };
+type LayoutProps = { children: React.ReactNode };
 
-const Layout = ({ children }: ILayout) => {
+const Layout = ({ children }: LayoutProps) => {
   return <div className={styles.layout}>{children}</div>;
 };
 

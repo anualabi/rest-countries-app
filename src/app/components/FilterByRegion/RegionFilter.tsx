@@ -3,12 +3,12 @@ import { Card } from '../../shared/components';
 import { region } from '../../shared/constants/region';
 import styles from './RegionFilter.module.css';
 
-interface IRegionFilter {
+interface RegionFilterProps {
   selectedOption: string;
   handleSelectOption: (e: string) => void;
 }
 
-const RegionFilterForm = ({ selectedOption, handleSelectOption }: IRegionFilter) => {
+const RegionFilterForm = ({ selectedOption, handleSelectOption }: RegionFilterProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSelect = () => setIsOpen(!isOpen);

@@ -1,8 +1,8 @@
 import styles from './CountryDetail.module.css';
 
-type IDetail = { name: string; info: string | number };
+type DetailProps = { name: string; info: string | number };
 
-const Detail = ({ name, info }: IDetail) => (
+const Detail = ({ name, info }: DetailProps) => (
   <p className={styles.detail}>
     {name} <span>{info}</span>
   </p>

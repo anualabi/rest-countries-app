@@ -1,6 +1,6 @@
-import { IRegion } from '../types/region';
+import { RegionProps } from '../types/region';
 
-export const region: IRegion[] = [
+export const region: RegionProps[] = [
   { key: 'Africa', value: 'africa' },
   { key: 'Americas', value: 'americas' },
   { key: 'Antarctic', value: 'antarctic' },
