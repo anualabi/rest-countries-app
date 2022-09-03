@@ -6,7 +6,7 @@
 }
 
 .container > .spinner {
-  border: 10px solid var(--background);
+  border: 10px solid transparent;
   border-top: 10px solid var(--text);
   border-radius: 50%;
   width: 80px;
@@ -16,10 +16,7 @@
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
