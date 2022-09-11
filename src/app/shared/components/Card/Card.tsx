@@ -1,10 +1,7 @@
-import { ReactNode } from 'react';
-import styles from './Card.module.css';
+import { StyledCard, CardProps } from './CardStyles';
 
-type CardProps = { className?: string; children: ReactNode };
-
-const Card = ({ className, children }: CardProps) => {
-  return <div className={`${styles.card} ${className}`}>{children}</div>;
+const Card = ({ children, ...props }: CardProps) => {
+  return <StyledCard {...props}>{children}</StyledCard>;
 };
 
 export default Card;
