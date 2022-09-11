@@ -1,10 +1,20 @@
-import { ReactNode } from 'react';
-import styles from './Container.module.css';
+import PropTypes from 'prop-types';
+import { ContainerProps, StyledContainer } from './ContainerStyles';
 
-type ContainerProps = { className?: string; children: ReactNode };
+const Container = ({ children, maxWidth, ...props }: ContainerProps) => {
+  return (
+    <StyledContainer maxWidth={maxWidth} {...props}>
+      {children}
+    </StyledContainer>
+  );
+};
 
-const Container = ({ children, className }: ContainerProps) => {
-  return <div className={`${styles.container} ${className}`}>{children}</div>;
+Container.propTypes = {
+  maxWidth: PropTypes.oneOf(['sm', 'md', 'lg', 'xl', 'xxl'])
+};
+
+Container.defaultProps = {
+  maxWidth: 'xxl'
 };
 
 export default Container;
