@@ -1,14 +1,15 @@
 import Container from '../Container/Container';
-import styles from './Error.module.css';
+import Typography from '../Typography/Typography';
+import { StyledErrorMessage, ErrorProps } from './ErrorStyles';
 
-type ErrorProps = { className?: string; message: string };
-
-const Error = ({ className, message }: ErrorProps) => {
+const ErrorMessage = ({ message }: ErrorProps) => {
   return (
-    <Container>
-      <p className={`${styles.error} ${className}`}>{message}</p>
-    </Container>
+    <StyledErrorMessage>
+      <Container>
+        <Typography className="error">{message}</Typography>
+      </Container>
+    </StyledErrorMessage>
   );
 };
 
-export default Error;
+export default ErrorMessage;
