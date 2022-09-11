@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import { APIResponseProps } from '../types/country';
-import { fetchData } from '../../services/country';
+import { fetchData } from '../../services/services';
 
 const apiUrl = process.env.REACT_APP_API;
 
