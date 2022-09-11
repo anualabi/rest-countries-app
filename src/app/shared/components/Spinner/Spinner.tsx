@@ -1,16 +1,18 @@
+import Box from '../Box/Box';
 import Container from '../Container/Container';
-import styles from './Spinner.module.css';
+import { StyledSpinner, SpinnerProps } from './SpinnerStyles';
 
-type SpinnerProps = { className?: string; size?: string; borderWidth?: string };
-
-const Spinner = ({ className, size, borderWidth }: SpinnerProps) => {
+const Spinner = ({ size, borderWidth }: SpinnerProps) => {
   return (
-    <Container className={styles.container}>
-      <div
-        className={`${styles.spinner} ${className}`}
-        style={{ width: `${size}px`, height: `${size}px`, borderWidth: `${borderWidth}px` }}
-      ></div>
-    </Container>
+    <StyledSpinner>
+      <Container className="container">
+        <Box
+          className="spinner"
+          style={{ width: `${size}px`, height: `${size}px`, borderWidth: `${borderWidth}px` }}
+          children={undefined}
+        ></Box>
+      </Container>
+    </StyledSpinner>
   );
 };
 
