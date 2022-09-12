@@ -43,7 +43,12 @@ const CountryPage = () => {
 
   return (
     <Container>
-      <Button className={styles.backButton} startIcon="arrow_back" onClick={() => navigate(-1)}>
+      <Button
+        className={styles.backButton}
+        startIcon="arrow_back"
+        onClick={() => navigate(-1)}
+        disableShadow={false}
+      >
         Back
       </Button>
       <div className={styles.countryDetail}>
