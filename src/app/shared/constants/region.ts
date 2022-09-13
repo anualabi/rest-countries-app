@@ -1,4 +1,9 @@
-import { RegionProps } from '../types/region';
+import { Region } from '../types/country';
+
+interface RegionProps {
+  key: keyof typeof Region;
+  value: string;
+}
 
 export const region: RegionProps[] = [
   { key: 'Africa', value: 'africa' },

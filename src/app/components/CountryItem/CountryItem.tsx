@@ -7,10 +7,10 @@ import styles from './CountryItem.module.css';
 type CountryItemProps = { item: CountryProps };
 
 const CountryItem = ({ item }: CountryItemProps) => {
-  const { ccn3, flags, name, population, region, capital } = item;
+  const { cca3, flags, name, population, region, capital } = item;
 
   return (
-    <Link className={styles.country} to={ccn3}>
+    <Link className={styles.country} to={cca3}>
       <Card className={styles.card}>
         <img className={styles.flag} src={flags.svg} alt={`${name.common} flag`} />
         <div className={styles.content}>

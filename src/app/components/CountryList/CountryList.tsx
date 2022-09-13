@@ -22,7 +22,7 @@ const CountryList = ({ searchTerm, selectedOption }: CountryListProps) => {
 
   const countryList = data
     ?.slice(0, 24)
-    .map((country) => <CountryItem key={country.ccn3} item={country} />);
+    .map((country) => <CountryItem key={country.cca3} item={country} />);
 
   return <Container className={styles.countryList}>{countryList}</Container>;
 };
